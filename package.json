@@ -41,11 +41,13 @@
     "react-test-renderer": "^16.0.0"
   },
   "scripts": {
-    "serve": "live-server public/",
+    "start": "node server/server.js",
     "build:dev": "webpack",
     "build:prod": "webpack -p --env production",
     "dev-server": "webpack-dev-server",
-    "test": "jest --config=jest.config.json"
+    "serve": "live-server public/",
+    "test": "jest --config=jest.config.json",
+    "heroku-postbuild": "npm run build:prod"
   },
   "author": "Keith Rodriguez",
   "license": "ISC"
