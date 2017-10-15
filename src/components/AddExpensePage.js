@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import ExpenseForm from './ExpenseForm';
-import { addExpense } from './../actions/expenses'
+import { addExpense } from '../actions/expenses';
 
 export class AddExpensePage extends React.Component {
 	onSubmit = (expense) => {
@@ -16,7 +16,7 @@ export class AddExpensePage extends React.Component {
 					onSubmit={this.onSubmit}
 				/>
 			</div>
-		)
+		);
 	}
 };
 

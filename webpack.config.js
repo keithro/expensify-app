@@ -12,7 +12,7 @@ module.exports = (env) => {
 			filename: 'bundle.js'
 		},
 		module: {
-			rules:[{
+			rules: [{
 				loader: 'babel-loader',
 				test: /\.js$/,
 				exclude: /node_modules/
@@ -24,7 +24,7 @@ module.exports = (env) => {
 							loader: 'css-loader',
 							options: {
 								sourceMap: true
-							}	
+							}
 						},
 						{
 							loader: 'sass-loader',
