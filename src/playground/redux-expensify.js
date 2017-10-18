@@ -1,6 +1,11 @@
 import { createStore, combineReducers } from 'redux';
 import uuid from 'uuid';
 
+// component calls action generator
+// action generator returns object (either from below or in filters file)
+// component takes object and passes to dispatch
+// redux store runs reducers and changes
+
 // ADD_EXPENSE
 const addExpense = (
   {
