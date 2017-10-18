@@ -32,17 +32,17 @@ export { firebase, database as default };
 
 // DELETE
 // -----------------
-// // // remove property of above entry
-// // database.ref('isSingle')
-// // 	.remove()
-// // 	.then(() => {
-// // 		console.log('Data removed');
-// // 	}).catch((e) => {
-// // 		console.log('Epic FAIL', e);
-// // 	});
+// // remove property of above entry
+// database.ref('isSingle')
+// 	.remove()
+// 	.then(() => {
+// 		console.log('Data removed');
+// 	}).catch((e) => {
+// 		console.log('Epic FAIL', e);
+// 	});
 
-// // // differnt methods to remove property
-// // database.ref('isSingle').set(null);
+// // differnt methods to remove property
+// database.ref('isSingle').set(null);
 
 // UPDATE
 // -----------------
