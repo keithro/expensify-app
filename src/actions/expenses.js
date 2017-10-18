@@ -6,14 +6,13 @@ import database from '../firebase/firebase';
 // component takes function and passes to dispatch
 // function runs (has the ability to dispatch other actions and do whatever it wants)
 
-
-// ADD_EXPENSE (returns object)
+// ADD_EXPENSE (returns object, actually changes redux store)
 export const addExpense = (expense) => ({
   type: 'ADD_EXPENSE',
   expense
 });
 
-// returns function
+// asyncroneous action returns function
 export const startAddExpense = (expenseData = {}) => {
   return (dispatch) => {
     const {
@@ -45,3 +44,30 @@ export const editExpense = (id, updates) => ({
   id,
   updates
 });
+
+// SET_EXPENSES - sets expenses array (to store? from firebase?)
+export const setExpenses = (expenses) => ({
+  type: 'SET_EXPENSES',
+  expenses
+});
+
+export const startSetExpenses = () => {
+  // fetch all data
+  return (dispatch) => {
+    return database.ref('expenses').once('value').then((snapshot) => {
+      const expenses = [];
+
+      // parse data into array
+      snapshot.forEach((childSnapshot) => {
+        expenses.push({
+          id: childSnapshot.key,
+          ...childSnapshot.val()
+        });
+      });
+
+      // dispatch SET_EXPENSES
+      dispatch(setExpenses(expenses));
+    });
+  };
+};
+

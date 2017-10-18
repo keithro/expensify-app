@@ -198,7 +198,7 @@ export { firebase, database as default };
 
 // // TO READ
 
-// GET DATA ONCE
+// GET DATA ONCE (and parse into array?)
 // database.ref('expenses')
 // 	.once('value')
 // 	.then((snapshot) => {
@@ -207,7 +207,6 @@ export { firebase, database as default };
 // 		// here forEach() is a firebase DataSnapshot method
 // 		snapshot.forEach((childSnapshot) => {
 // 			expenses.push({
-
 // 				// keys are the id and all the values are child elements
 // 				id: childSnapshot.key,
 // 				// so we can spreaad whatever data comes back
