@@ -1,5 +1,5 @@
-import expensesReducer from './../../reducers/expenses';
-import expenses from './../fixtures/expenses';
+import expensesReducer from '../../reducers/expenses';
+import expenses from '../fixtures/expenses';
 
 // EXPENSES REDUCER TESTS
 test('should set default state', () => {
