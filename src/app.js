@@ -13,14 +13,12 @@ import { firebase } from './firebase/firebase';
 import LoadingPage from './components/LoadingPage';
 
 const store = configureStore();
-
 // Provider - lets us define store
 const jsx = (
   <Provider store={store}>
     <AppRouter />
   </Provider>
 );
-
 let hasRendered = false;
 // render only if it has not already
 const renderApp = () => {
